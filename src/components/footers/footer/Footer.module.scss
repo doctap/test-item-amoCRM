@@ -1,0 +1,80 @@
+.footer {
+  padding: 3.438em 0 0 0;
+
+  .footerBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+
+      .aboutCompany {
+        display: flex;
+        flex-direction: column;
+
+        .links {
+          display: inline-flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 3em;
+        }
+      }
+
+      .LinkMenu {
+        margin-left: 6.125em;
+        min-width: 25.5em;
+      }
+    }
+
+    .Contacts {
+
+      .title {
+        text-align: end;
+      }
+
+      .contactsList {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        &>* {
+          margin-bottom: 1.12em;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-family: 'Montserrat';
+    font-size: 0.75rem;
+    color: #E4E5EA;
+    padding: 1.667em 0;
+    margin-top: 1em;
+
+    &>* {
+      color: #E4E5EA;
+    }
+  }
+}
+
+.title {
+  font-family: 'Inter';
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #656566;
+  margin-bottom: 1.429em;
+}
+
+.links>* {
+  font-family: 'Inter';
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #E4E5EA;
+}

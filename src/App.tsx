@@ -1,23 +1,17 @@
 import React from 'react';
+import { Layout, Page } from './pages';
+import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.scss';
-import { useAppDispatch, useAppSelector } from './redux/hooks/redux';
-import { showSlice } from './redux/reducers/ExampleSlice';
-import logo from './logo.svg';
-import { Timer } from './components';
 
 function App () {
-  const { plusOne, showHideWindow } = showSlice.actions;
-  const { counter, isShow } = useAppSelector(st => st.showSlice);
-  const dispatch = useAppDispatch();
-
-  const showReact = () => { dispatch(showHideWindow(!isShow)); };
-  const setCount = () => { dispatch(plusOne(counter + 1)); };
-
+  // <Timer />
   return (
     <div className={styles.App}>
-
-      <Timer />
-
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Page />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

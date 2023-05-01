@@ -1,0 +1,30 @@
+.title {
+  font-family: 'Inter';
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #656566;
+  margin-bottom: 1.429em;
+}
+
+.menu_columns {
+  height: 8.438em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .menuPart>* {
+    font-family: 'Inter';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #E4E5EA;
+  }
+
+  .menuPart{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8.438em;
+  }
+}

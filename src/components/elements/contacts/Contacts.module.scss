@@ -1,0 +1,15 @@
+.address,
+.linkCallNumber  {
+  color: #ffff;
+  white-space: nowrap;
+}
+
+.linkCallNumber {
+  text-decoration: none;
+}
+
+.messengerLinks {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 7.5em;
+}
