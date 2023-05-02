@@ -1,50 +1,59 @@
 .footer {
-  padding: 3.438em 0 0 0;
+  padding: 3.438em 10.4% 0 10.4%;
 
-  .footerBody {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .footerBlock {
+    width: 100%;
 
-    .columns {
+    .footerBody {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
 
-      .aboutCompany {
+      .columns {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 60%;
 
-        .links {
-          display: inline-flex;
+        .aboutCompany {
+          display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          height: 3em;
+          margin: 0 1em 1.5em 0;
+
+          .links {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 3em;
+          }
+        }
+
+        .LinkMenu {
+          min-width: 25.5em;
         }
       }
 
-      .LinkMenu {
-        margin-left: 6.125em;
-        min-width: 25.5em;
-      }
-    }
+      .Contacts {
 
-    .Contacts {
+        .title {
+          text-align: end;
+        }
 
-      .title {
-        text-align: end;
-      }
+        .contactsList {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
 
-      .contactsList {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-
-        &>* {
-          margin-bottom: 1.12em;
+          &>* {
+            margin-bottom: 1.12em;
+          }
         }
       }
     }
   }
+
 
   .footerBottom {
     display: flex;
@@ -77,4 +86,20 @@
   font-weight: 400;
   font-size: 1rem;
   color: #E4E5EA;
+}
+
+@media screen and (max-width: 837px) {
+
+  .footer .footerBlock .footerBody .columns {
+    width: min-content;
+    margin-bottom: 2em;
+  }
+
+  .footer .footerBlock .footerBody .Contacts .title {
+    text-align: start;
+  }
+
+  .footer .footerBlock .footerBody .Contacts .contactsList {
+    align-items: start;
+  }
 }

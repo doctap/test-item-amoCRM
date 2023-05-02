@@ -12,3 +12,28 @@
   font-size: 1rem;
   font-weight: 400;
 }
+
+@media screen and (max-width: 836px) {
+
+  .title {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .title::before {
+    content: '';
+    height: 1.5px;
+    width: 10px;
+    background: linear-gradient(90deg, #FCB045, #FD1D1D);
+    margin-right: 5px;
+  }
+
+  .offer {
+    display: none;
+  }
+}

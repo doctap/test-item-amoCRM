@@ -4,17 +4,19 @@ import type {
   menuLinks1,
   menuLinks2,
   messengerLinks,
-  navLinks
+  desktopNavLinks,
+  mobileNavLinks
 } from '../contentData';
 
-export type NavLink = (typeof navLinks)[number];
+export type NavLink = (typeof desktopNavLinks)[number];
 export type AboutCompanyLink = (typeof aboutCompanyLinks)[number];
 export type MenuLink1 = (typeof menuLinks1)[number];
 export type MenuLink2 = (typeof menuLinks2)[number];
 
 export type LinkListType = AboutCompanyLink | MenuLink1 | MenuLink2;
 
-export type NavLinkTuple = typeof navLinks;
+export type DesktopNavLinkTuple = typeof desktopNavLinks;
+export type MobileNavLinks = typeof mobileNavLinks;
 export type AboutCompanyLinkTuple = typeof aboutCompanyLinks;
 export type MenuLinkTuple1 = typeof menuLinks1;
 export type MenuLinkTuple2 = typeof menuLinks2;

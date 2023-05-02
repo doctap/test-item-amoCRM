@@ -1,9 +1,9 @@
 import React from 'react';
 import { Header } from '../../components';
-import { navLinks } from '../../contentData';
+import { desktopNavLinks, mobileNavLinks } from '../../contentData';
 
 export const Layout = () => {
   return (
-    <Header navLinks={navLinks} />
+    <Header mobileNavLinks={mobileNavLinks} desktopNavLinks={desktopNavLinks} />
   );
 };

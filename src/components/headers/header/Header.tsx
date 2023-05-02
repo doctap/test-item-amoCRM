@@ -2,12 +2,13 @@ import React from 'react';
 import { DefaultLogo } from '../../logoModels';
 import { Outlet, Link } from 'react-router-dom';
 import { Contacts } from '../../elements';
-import type { NavLinkTuple } from '../../../types';
+import type { DesktopNavLinkTuple, MobileNavLinks } from '../../../types';
 import { companyContacts } from '../../../contentData';
 import styles from './Header.module.scss';
 
 export interface IHeader {
-  navLinks: NavLinkTuple
+  desktopNavLinks: DesktopNavLinkTuple
+  mobileNavLinks: MobileNavLinks
 }
 
 export const Header = (prop: IHeader) => {
@@ -18,8 +19,13 @@ export const Header = (prop: IHeader) => {
           <div className={styles.logo}>
             <DefaultLogo />
           </div>
-          <nav className={styles.nav}>
-            {prop.navLinks.map(l => (
+          <nav className={styles.desktopNav}>
+            {prop.desktopNavLinks.map(l => (
+              <Link key={l.linkName} to={l.path}>{l.linkName}</Link>
+            ))}
+          </nav>
+          <nav className={styles.mobileNav}>
+            {prop.mobileNavLinks.map(l => (
               <Link key={l.linkName} to={l.path}>{l.linkName}</Link>
             ))}
           </nav>
