@@ -25,7 +25,7 @@ export const Footer = (prop: IFooter) => {
           <div className={styles.columns}>
             <div className={styles.aboutCompany}>
               <div className={styles.title}>
-            о компании
+                о компании
               </div>
               <div className={styles.links}>
                 {prop.aboutCompany.map(l => (
@@ -45,7 +45,7 @@ export const Footer = (prop: IFooter) => {
 
           <div className={styles.Contacts}>
             <div className={styles.title}>
-            контакты
+              контакты
             </div>
             <div className={styles.contactsList}>
               <Contacts {...allCompanyContacts} />

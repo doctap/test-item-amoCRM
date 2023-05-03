@@ -103,11 +103,13 @@
     align-items: center;
     background-image: url(../../images/mobile-bg.png);
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .page .main {
     width: min-content;
     margin-bottom: 0;
+    padding: 40px 0 40px 0;
   }
 
   .page .main .offerBlock {
